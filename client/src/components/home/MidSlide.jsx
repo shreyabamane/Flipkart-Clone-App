@@ -5,15 +5,24 @@ const Component = styled(Box)`
     display: flex;
 `;
 
-const LeftComponent = styled(Box)`
-    width: 83%;
-`;
+const LeftComponent = styled(Box)(({theme}) => ({
+    width: '83%',
+    [theme.breakpoints.down('md')]:{
+        width: '100%'
+    }
+}));
 
-const RightComponent = styled(Box)`
-    background: #FFFFFF;
-    padding: 5px;
-    margin-top: 10px;
-`;
+const RightComponent = styled(Box)(({theme}) => ({
+    background: '#FFFFFF',
+    padding: 5,
+    marginTop: 10,
+    marginLeft: 10,
+    width: '17%',
+    textAlign: 'center',
+    [theme.breakpoints.down('md')]:{
+        display: 'none'
+    }
+}));
 
 
 export function MidSlide({ products, title, timer }) {
