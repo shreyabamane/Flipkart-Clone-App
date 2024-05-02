@@ -18,10 +18,22 @@ const StyleBadge = styled(Badge)`
     font-size: 15px;
 `;
 
+const ColumnText = styled(TableRow)`
+   font-size: 14px;
+   vertical-align: baseline;
+   & > td {
+    font-size: 14px;
+    margin-top: 10px;
+    border: none;
+   }
+`;
+
 
 export function ProductDetail({product}) {
 
     const fassured = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png';
+    const adURL = 'https://rukminim1.flixcart.com/lockin/774/185/images/CCO__PP_2019-07-14.png?q=50';
+
 
     const date = new Date(new Date().getTime()+(5 * 24 * 60 * 60 * 1000));
 
@@ -52,10 +64,35 @@ export function ProductDetail({product}) {
 
             <Table>
                 <TableBody>
-                    <TableRow>
-                        <TableCell>Delivery</TableCell>
-                        <TableCell>Delivery by {date.toDateString()} | ₹40 </TableCell>
-                    </TableRow>
+                    <ColumnText>
+                        <TableCell style={{ color: '#878787' }}>Delivery</TableCell>
+                        <TableCell style={{ fontWeight: 600 }}>Delivery by {date.toDateString()} | ₹40 </TableCell>
+                    </ColumnText>
+
+                    <ColumnText>
+                        <TableCell style={{ color: '#878787' }}>Warranty</TableCell>
+                        <TableCell >No Warranty</TableCell>
+                    </ColumnText>
+
+                    <ColumnText>
+                        <TableCell style={{ color: '#878787' }}>Seller</TableCell>
+                        <TableCell>
+                            <Box component="span" style={{ color: '#2874f0' }}>SuperComNet</Box>
+                            <Typography>GST invoice available </Typography>
+                            <Typography>View more sellers starting from ₹{product.price.cost}</Typography>
+                        </TableCell>
+                    </ColumnText>
+
+                    <ColumnText>
+                        <TableCell colSpan={2}>
+                            <img src={adURL} style={{width: 390}} alt="flipkartpoints" />
+                        </TableCell>
+                    </ColumnText>
+
+                    <ColumnText>
+                        <TableCell style={{ color: '#878787' }}>Description</TableCell>
+                        <TableCell >{product.description}</TableCell>
+                    </ColumnText>
                 </TableBody>
             </Table>
 
