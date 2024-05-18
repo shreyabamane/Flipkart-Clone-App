@@ -2,7 +2,7 @@ import express from 'express';
 
 import { userSignup, userLogin } from '../controller/user-controller.js';
 import { getProducts, getProductById } from '../controller/product-controller.js';
-import { addPaymentGateway } from '../controller/payment-controller.js';
+import { addPaymentGateway, paytmResponse } from '../controller/payment-controller.js';
 
 const router = express.Router();
 
@@ -14,5 +14,6 @@ router.get('/product/:id', getProductById);
 
 //for payment using paytm
 router.post('/payment', addPaymentGateway);
+router.post('/callback', paytmResponse);
 
 export default router;

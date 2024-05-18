@@ -42,20 +42,20 @@ export function ActionItem({ product }) {
 
     const { id } = product;
 
-    const addItemToCart = () => {
-        dispatch(addToCart(id, quantity));
-        navigate('/cart');
-    }
-
-    const buyNow = () => {
-        let response = payUsingPaytm({ amount: 500, email: 'shreyabamane@gmail.com' });
+    const buyNow = async () => {
+        let response = await payUsingPaytm({ amount: 500, email: 'flipkartclone01@gmail.com' });
         let information = {
             action: 'https://securegw-stage.paytm.in/order/process',
             params: response
         }
         post(information);
     }
-
+    
+    const addItemToCart = () => {
+        dispatch(addToCart(id, quantity));
+        navigate('/cart');
+    }
+    
     return (
         <LeftContainer>
             <Box style={{padding: '15px 20px', border: '1px solid #f0f0f0',  width: '90%'}}>
