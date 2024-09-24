@@ -29,6 +29,15 @@ const Remove = styled(Button)`
     color: #000;
     font-weight: 600;
 `;
+const ProductImage = styled('img')({
+    height: 110,
+    width: 110
+});
+const PriceTypography = styled(Typography)`
+margin:20px 0;
+font-weight:600;
+font-size:18px;
+`;
 
 
 export function CartItem({ item }) {
@@ -39,25 +48,25 @@ export function CartItem({ item }) {
 
     const removeItemFromCart = (id) => {
         dispatch(removeFromCart(id))
-    }
+    };
 
     return (
         <Component>
             <LeftComponent>
-                <img src={item.url} alt="product" style={{height: 110, width: 110}} />
-                <GroupedButton />
+                <ProductImage src={item?.url} alt={item?.tile?.longTitle || "Product Image"} />
+                <GroupedButton itemId={item?.id} quantity={item?.quantity || 1} />
             </LeftComponent>
-            <Box style={{margin: 20}} >
-                <Typography>{addellipsis(item.title.longTitle)}</Typography>
-                <SmallText>Seller:RetailNet
+            <Box style={{ margin: 20 }} >
+                <Typography>{addellipsis(item?.title?.longTitle || "Product Title")}</Typography>
+                <SmallText>Seller:{item?.seller || "RetailNet"}
                     <Box component='span'><img src={fassured} alt="flipkart" style={{ width: 50, marginLeft: 10 }} /></Box>
                 </SmallText>
-                <Typography style={{margin: '20px 0'}}>
-                    <Box component="span" style={{ fontWeight: 600, fontSize: 18 }}>₹{item.price.cost}</Box>&nbsp;&nbsp;&nbsp;
-                    <Box component="span" style={{ color: '#878787' }}><strike>₹{item.price.mrp}</strike></Box>&nbsp;&nbsp;&nbsp;
-                    <Box component="span" style={{ color: '#388E3C' }}>{item.price.discount}</Box>
-                </Typography>
-                <Remove onClick={() => removeItemFromCart(item.id)}>Remove</Remove>
+                <PriceTypography>
+                    <Box component="span">₹{item?.price?.cost || 0}</Box>&nbsp;&nbsp;&nbsp;
+                    <Box component="span" style={{ color: '#878787' }}><strike>₹{item?.price?.mrp || 0}</strike></Box>&nbsp;&nbsp;&nbsp;
+                    <Box component="span" style={{ color: '#388E3C' }}>{item?.price?.discount || "0%"}</Box>
+                </PriceTypography>
+                <Remove onClick={() => removeItemFromCart(item?.id)}>Remove</Remove>
             </Box>
         </Component>
     )

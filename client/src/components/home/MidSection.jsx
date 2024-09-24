@@ -6,7 +6,7 @@ const Wrapper = styled(Grid)`
     justify-content: space-between;
 `;
 
-const Image = styled('img')(({theme}) => ({
+const Image = styled('img')(({ theme }) => ({
     marginTop: 10,
     width: '100%',
     display: 'flex',
@@ -23,11 +23,11 @@ export function MidSection() {
 
     return (
         <>
-            <Wrapper lg={12} sm={12} md={12} xs={12} container >
+            <Wrapper container >
                 {
-                    imageURL.map(image => (
-                        <Grid item lg={4} md={4} sm={12} xs={12} >
-                            <img src={image} alt="image" style={{ width: '100%' }} />
+                    imageURL.map((image, index) => (
+                        <Grid item lg={4} md={4} sm={12} xs={12} key={index} >
+                            <Image src={image} alt="image" style={{ width: '100%' }} />
                         </Grid>
                     ))
                 }

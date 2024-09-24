@@ -59,11 +59,11 @@ export function Cart(){
                         </Header>
                         {
                             CartItems.map(item => (
-                                <CartItem item={item}/>
+                                <CartItem key={item.id} item={item}/>
                             ))
                         }
                         <ButtonWrapper>
-                            <StyledButton>Place Order</StyledButton>
+                            <StyledButton disabled={!CartItems.length}>Place Order</StyledButton>
                         </ButtonWrapper>
                     </LeftComponent>
                     <Grid item lg={3} md={3} sm={12} xs={12} >

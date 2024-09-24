@@ -79,7 +79,7 @@ export function Slide({ products, title, timer }) {
                 {
                     timer &&
                     <Timer>
-                        <img src={timerURL} alt="timer" style={{ width: 24 }} />
+                        <Image src={timerURL} alt="timer" style={{ width: 24 }} />
                         <Countdown date={Date.now() + 5.04e+7} renderer={renderer} />
                     </Timer>
                 }
@@ -104,7 +104,7 @@ export function Slide({ products, title, timer }) {
             >
                 {
                     products.map(product => (
-                        <Link to={`product/${product.id}`} style={{textDecoration: 'none'}}>
+                        <Link key={product.id} to={`product/${product.id}`} style={{textDecoration: 'none'}}>
                             <Box textAlign="center" style={{ padding: '25px 15px' }}>
                                 <Image src={product.url} alt="product" />
                                 <Text style={{ fontWeight: 600, color: '#212121' }}>{product.title.shortTitle}</Text>
