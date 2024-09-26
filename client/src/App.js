@@ -7,6 +7,7 @@ import { DataProvider } from './context/DataProvider';
 import { DetailView } from './components/details/DetailView';
 import { Cart } from './components/cart/Cart';
 import { SuccessPage } from './components/payment/SuccessPage';
+import { CancelPage } from './components/payment/CancelPage';
 
 function App() {
   return (
@@ -16,9 +17,10 @@ function App() {
         <Box style={{ marginTop: 54 }}>
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/product/:id' element={<DetailView/>} />
-            <Route path='/Cart' element={<Cart/>} />
-            <Route path='/success' element={<SuccessPage/>} />
+            <Route path='/product/:id' element={<DetailView />} />
+            <Route path='/Cart' element={<Cart />} />
+            <Route path='/success' element={<SuccessPage />} />
+            <Route path='/cancel' element={<CancelPage />} />
           </Routes>
         </Box>
       </BrowserRouter>
