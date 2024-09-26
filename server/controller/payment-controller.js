@@ -1,71 +1,39 @@
-import formidable from 'formidable';
-import https from 'https';
-import { paytmMerchantKey, paytmParams } from '../index.js';
-import paytmchecksum from '../paytm/PaytmChecksum.js';
+import Stripe from "stripe";
+import dotenv from "dotenv";
 
+dotenv.config();
 
-export const addPaymentGateway = async (request, response) => {
-    const paytmCheckSum= await paytmchecksum.generateSignature(paytmParams, paytmMerchantKey);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+
+export const createCheckoutSession = async (req, res) => {
+    const { cartItems } = req.body;
+
     try {
-       const params = {
-          ...paytmParams,
-          'CHECKSUMHASH': paytmCheckSum
-       }
 
-    //    response.status(200).json(params);
-       response.json(params);
+        if (!cartItems || cartItems.length === 0) {
+            return res.status(400).json({ error: 'No items provided' });
+        }
 
+        const session = await stripe.checkout.sessions.create({
+            payment_method_types: ['card'],
+            line_items: cartItems.map(item => ({
+                price_data: {
+                    currency: 'inr',
+                    product_data: {
+                        name: item.title.shortTitle || item.title.longTitle,
+                    },
+                    unit_amount: item.price.cost * 100,
+                },
+                quantity: item.quantity,
+            })),
+            mode: 'payment',
+            success_url: 'http://localhost:3000/success',
+            cancel_url: 'http://localhost:3000/cancel'
+        });
+
+        res.status(200).json({ sessionId: session.id });
     } catch (error) {
-        // response.status(500).json({ error: error.message })
-        console.log(error)
+        console.error('Error creating checkout session', error);
+        res.status(500).json({ error: 'Unable to create checkout session' });
     }
-}
-
-export const paytmResponse = (request, response) => {
-    const form = new formidable.IncomingForm();
-    const paytmCheckSum = request.body.CHECKSUMHASH;
-    delete request.body.CHECKSUMHASH;
-
-    const isVerifySignature = paytmchecksum.verifySignature(request.body, paytmMerchantKey, paytmCheckSum );
-    if (isVerifySignature){
-        let paytmParams = {};
-        paytmParams['MID'] = request.body.MID;
-        paytmParams['ORDERID'] = request.body.ORDERID;
-
-        paytmchecksum.generateSignature(paytmParams, paytmMerchantKey).then(function(checksum){
-            paytmParams['CHECKSUMHASH'] = checksum;
-
-            const post_data = JSON.stringify(paytmParams);
-
-            const options = {
-                hostname: 'securegw-stage.paytm.in',
-                port: 443,
-                path: '/order/status',
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Content-Length': post_data.length
-                }
-            }
-
-            let res = "";
-            let post_req = https.request(options, function(post_res){
-                post_res.on('data', function(chunk) {
-                    res += chunk;
-                });
-
-                post_res.on('end', function(){
-                    let result = JSON.parse(res)
-                    console.log(result);
-                    response.redirect('http://localhost:3000/')
-                });
-            });
-
-            post_req.write(post_data);
-            post_req.end();
-        })
-    } else {
-        console.log('Checksum mismatched');
-    }
-
 }
