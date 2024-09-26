@@ -79,7 +79,7 @@ export function Slide({ products, title, timer }) {
                 {
                     timer &&
                     <Timer>
-                        <Image src={timerURL} alt="timer" style={{ width: 24 }} />
+                        <img src={timerURL} alt="timer" style={{ width: 24 }} />
                         <Countdown date={Date.now() + 5.04e+7} renderer={renderer} />
                     </Timer>
                 }
