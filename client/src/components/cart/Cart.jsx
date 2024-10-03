@@ -73,6 +73,8 @@ export function Cart() {
             const result = await stripe.redirectToCheckout({ sessionId });
             if (result.error) {
                 console.error(result.error.message);
+            } else {
+                navigate('/success');
             }
         } catch (error) {
             console.error("Error in Stripe Checkout:", error.message);

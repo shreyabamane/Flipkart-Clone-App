@@ -124,6 +124,24 @@ export const products = [
         description: 'Let music brighten up your mood anytime, anywhere with the boAt 235v2 Fast Charging Bluetooth Headset. This Bluetooth headset features a Call Vibration Alert, a Fast Charging Technology, and Easy Access Controls to listen to and manage your favorite music with ease.',
         discount: 'Minimum 50% Off', 
         tagline: 'Grab Now!' 
+    },
+    { 
+        id: 'product8',
+        url: 'https://rukminim2.flixcart.com/image/128/128/xif0q/headphone/q/m/s/-original-imah3zvdthupfejc.jpeg?q=70',
+        detailUrl: 'https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/q/m/s/-original-imah3zvdthupfejc.jpeg?q=70', 
+        title: {
+            shortTitle: 'Best Truewireless Headphones',
+            longTitle: 'boAt Airdopes 161/163 with ASAP Charge & 40 HRS Playback Bluetooth  (Pebble Black, Active Black, True Wireless)'
+        }, 
+        price: {
+            mrp: 2490,
+            cost: 783,
+            discount: '68%'
+        },
+        quantity: 1,
+        description:'Its time to Do Your Groove, with Airdopes161TWS earbuds. The 13mm drivers in the earbuds are there to deliver an immersive listening time. It comes equipped with Bluetooth v5.1 wireless technology so that you can enjoy all of your sessions lag-free. The IWP tech enabled TWS earbuds power on as soon as the case lid gets opened. Moreover, the ASAP Charge tech helps the earbuds to gather up to 90 Mins of playtime in only 5 minutes of charging. Airdopes 161 provides a total playback time of up to 40HRS. With an IPX5 marked water resistant build, the earbuds offer flexibility whether you are at the gym or traversing those far terrains. You can command playback, hands-free and activate voice assistant with ease via the instant response touch controls. Now, stay indulged in your playlists and enjoy a truly immersive auditory experience on Airdopes161.',
+        discount: 'Minimum 60% Off', 
+        tagline: 'Grab Now!' 
     }
 ];
 

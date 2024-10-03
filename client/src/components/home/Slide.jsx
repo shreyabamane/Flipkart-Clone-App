@@ -34,7 +34,7 @@ const Deal = styled(Box)`
 const Timer = styled(Box)`
     display: flex;
     margin-left: 10px;
-    align-items: center:
+    align-items: center;
     color: #7f7f7f;
 `;
 
