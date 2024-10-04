@@ -11,16 +11,16 @@ const stripePromise = loadStripe('pk_test_51PNXNvDYxiYRNSsqrAGVuTl4cscDyOdjy4za9
 
 const LeftContainer = styled(Box)(({ theme }) => ({
     minWidth: '40%',
-    padding: '40px 0 0 80px',
+    padding: '40px 10px 0 80px',
     [theme.breakpoints.down('lg')]: {
         padding: '20px 40px'
     }
 }));
 
 const Image = styled('img')({
-    padding: '15px',
-    width: '23rem',
-    height: '32rem'
+    padding: '15px 0px 15px 70px',
+    width: '15rem',
+    height: '28rem'
 });
 
 const StyledButton = styled(Button)(({ theme }) => ({
