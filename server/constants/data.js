@@ -51,7 +51,7 @@ export const products = [
         quantity: 1,
         description: 'This unique product can tone your back muscles, reduce belly fat, improve blood circulation and also improves your body posture. It increases the stamina, energy and vitality of the body. The elastic resistance of the rubber training rope can be used to train and exercise in whichever way you want, according to your physical needs.',
         discount: 'Upto 70% Off', 
-        tagline: 'Deal of the Day' 
+        tagline: 'Deal of the day' 
     },
     { 
         id: 'product4',
@@ -195,6 +195,78 @@ export const products = [
         quantity: 1,
         description:'Crafted From High Quality Glass And Material, This hanging Lamp Is Long Lasting And Energy Efficient. This Pendent Lamp Produces The Same Amount Of Light As Normal Ones And Features A Look That Is Similar To Traditional Incandescent Lights, But It Also Has A Light Weight Design And Is More Energy Efficient. Austrian Crystal (k-9/Asfour) jhoomar',
         discount: 'Minimum 75% Off', 
+        tagline: 'Grab Now!' 
+    },
+    { 
+        id: 'product12',
+        url: 'https://rukminim2.flixcart.com/image/128/128/xif0q/bottle/1/l/h/750-750-ml-sports-and-hiking-stainless-steel-water-bottle-chromo-original-imah2azkzgh8gwfz.jpeg?q=70',
+        detailUrl: 'https://rukminim2.flixcart.com/image/416/416/xif0q/bottle/1/l/h/750-750-ml-sports-and-hiking-stainless-steel-water-bottle-chromo-original-imah2azkzgh8gwfz.jpeg?q=70', 
+        title: {
+            shortTitle: 'Water Bottle',
+            longTitle: 'pexpo Sports and Hiking Stainless Steel Water Bottle, Chromo 750 ml Bottle'
+        }, 
+        price: {
+            mrp: 349,
+            cost: 269,
+            discount: '22%'
+        },
+        quantity: 1,
+        description:'Pexpo Chromo single wall steel water bottle is your reliable hydration companion for every adventure. Crafted with durable stainless steel. Perfect for gym workouts, school, office, or outdoor activities. Chromo is designed to fit your active lifestyle. with a sleek and stylish design, its also eco-friendly, helping to reduce single-use plastic waste. Say goodbye to disposable bottles and Welcome sustainable hydration with our single wall steel quick cooling fridge water bottle.',
+        discount: 'Minimum 20% Off', 
+        tagline: 'Grab Now!' 
+    },
+    { 
+        id: 'product13',
+        url: 'https://rukminim2.flixcart.com/image/128/128/xif0q/refrigerator-new/l/c/a/-original-imah27qyeuxfp7kn.jpeg?q=70',
+        detailUrl: 'https://rukminim2.flixcart.com/image/416/416/xif0q/refrigerator-new/l/c/a/-original-imah27qyeuxfp7kn.jpeg?q=70', 
+        title: {
+            shortTitle: 'Refrigerator',
+            longTitle: 'Admiral 175 L Direct Cool Single Door 3 Star Refrigerator'
+        }, 
+        price: {
+            mrp: 18499,
+            cost: 10290,
+            discount: '44%'
+        },
+        quantity: 1,
+        description:'Perishable items can be instantly cooled with the Admiral Single Door Refrigerator. The refrigerator can effectively preserve the freshness, nutritional value, and quality of food products, extending their shelf life.',
+        discount: 'Minimum 40% Off', 
+        tagline: 'Grab Now!' 
+    },
+    { 
+        id: 'product14',
+        url: 'https://rukminim2.flixcart.com/image/128/128/xif0q/shoe/0/c/3/6-rng-854-grey-40-bruton-grey-original-imah3xh6a6ecvmng.jpeg?q=70',
+        detailUrl: 'https://rukminim2.flixcart.com/image/416/416/xif0q/shoe/0/c/3/6-rng-854-grey-40-bruton-grey-original-imah3xh6a6ecvmng.jpeg?q=70', 
+        title: {
+            shortTitle: 'BRUTON Shoes',
+            longTitle: 'Lite Sports Running Shoes For Men  (Grey , 6)'
+        }, 
+        price: {
+            mrp: 2499,
+            cost: 458,
+            discount: '81%'
+        },
+        quantity: 1,
+        description:'Providing you with the flexibility of adjusting the fit of the shoes as per your comfort and style, these shoes feature a lace closure. With the help of lace closure, you can easily tighten or loosen the fit of the shoes and make sure that there is enough flexibility of movement.',
+        discount: 'Minimum 80% Off', 
+        tagline: 'Grab Now!' 
+    },
+    { 
+        id: 'product15',
+        url: 'https://rukminim2.flixcart.com/image/128/128/xif0q/painting/a/k/q/24-3-sanfs36045-saf-original-imah2rknjchgwkgz.jpeg?q=70',
+        detailUrl: 'https://rukminim2.flixcart.com/image/416/416/xif0q/painting/a/k/q/24-3-sanfs36045-saf-original-imah2rknjchgwkgz.jpeg?q=70', 
+        title: {
+            shortTitle: 'Painting',
+            longTitle: 'saf flower with couple peacock Premium wall paintings for wall decoration Digital Reprint 14 inch x 24 inch Painting'
+        }, 
+        price: {
+            mrp: 999,
+            cost: 345,
+            discount: '65%'
+        },
+        quantity: 1,
+        description:'The safflower with couple peacock premium wall painting is a beautiful digital reprint, designed to enhance wall décor. This painting measures 14 inches by 24 inches and showcases a vibrant scene featuring a couple of peacocks surrounded by safflowers, symbolizing grace and beauty. The digital artwork offers a rich color palette and intricate details, making it a perfect choice for living room or bedroom decoration. The reprint combines traditional elegance with modern printing techniques to add a stylish touch to any interior.',
+        discount: 'Minimum 60% Off', 
         tagline: 'Grab Now!' 
     },
 ];

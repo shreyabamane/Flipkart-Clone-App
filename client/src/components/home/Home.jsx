@@ -29,16 +29,19 @@ export function Home() {
       dispatch(getProducts()); // getProducts() this the function of productActions
    }, [dispatch]);
 
+   const dealOfTheDay = products.filter(product => product.tagline==='Deal of the day');
+   const suggestingItems = products.filter(product=>product.price.cost < 1000);
+
 
    return (
       <>
          <NavBar />
          <Component>
             <Banner />
-            <MidSlide products={products} title='Deal of the Day' timer={true} />
+            <MidSlide products={dealOfTheDay} title='Deal of the Day' timer={true} />
             <MidSection />
             <Slide products={products} title='Discounts for You' timer={false} />
-            <Slide products={products} title='Suggesting Items' timer={false} />
+            <Slide products={suggestingItems} title='Suggesting Items' timer={false} />
             <Slide products={products} title='Top Selection' timer={false} />
             <Slide products={products} title='Recommended Items' timer={false} />
             <Slide products={products} title='Trending Offers' timer={false} />
