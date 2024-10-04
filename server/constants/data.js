@@ -130,7 +130,7 @@ export const products = [
         url: 'https://rukminim2.flixcart.com/image/128/128/xif0q/headphone/q/m/s/-original-imah3zvdthupfejc.jpeg?q=70',
         detailUrl: 'https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/q/m/s/-original-imah3zvdthupfejc.jpeg?q=70', 
         title: {
-            shortTitle: 'Best Truewireless Headphones',
+            shortTitle: 'Best Headphones',
             longTitle: 'boAt Airdopes 161/163 with ASAP Charge & 40 HRS Playback Bluetooth  (Pebble Black, Active Black, True Wireless)'
         }, 
         price: {
@@ -142,6 +142,60 @@ export const products = [
         description:'Its time to Do Your Groove, with Airdopes161TWS earbuds. The 13mm drivers in the earbuds are there to deliver an immersive listening time. It comes equipped with Bluetooth v5.1 wireless technology so that you can enjoy all of your sessions lag-free. The IWP tech enabled TWS earbuds power on as soon as the case lid gets opened. Moreover, the ASAP Charge tech helps the earbuds to gather up to 90 Mins of playtime in only 5 minutes of charging. Airdopes 161 provides a total playback time of up to 40HRS. With an IPX5 marked water resistant build, the earbuds offer flexibility whether you are at the gym or traversing those far terrains. You can command playback, hands-free and activate voice assistant with ease via the instant response touch controls. Now, stay indulged in your playlists and enjoy a truly immersive auditory experience on Airdopes161.',
         discount: 'Minimum 60% Off', 
         tagline: 'Grab Now!' 
-    }
+    },
+    { 
+        id: 'product9',
+        url: 'https://rukminim2.flixcart.com/image/128/128/xif0q/suitcase/r/f/c/-original-imagypsrkjhy6kbt.jpeg?q=70',
+        detailUrl: 'https://rukminim2.flixcart.com/image/416/416/xif0q/suitcase/r/f/c/-original-imagypsrkjhy6kbt.jpeg?q=70', 
+        title: {
+            shortTitle: 'Safari Trolly Bag',
+            longTitle: 'Small Cabin Suitcase (55 cm) 4 Wheels - Magnum Fury 55 - Teal'
+        }, 
+        price: {
+            mrp: 7365,
+            cost: 1349,
+            discount: '81%'
+        },
+        quantity: 1,
+        description:'The cabin suitcase has a rugged construction with a durable polypropylene body, making it a stylish travel companion. It also has a sleek design that exudes elegance and charming aesthetics, ideal for a modern traveller.',
+        discount: 'Minimum 80% Off', 
+        tagline: 'Grab Now!' 
+    },
+    { 
+        id: 'product10',
+        url: 'https://rukminim2.flixcart.com/image/128/128/xif0q/perfume/q/b/x/80-luxury-perfume-gift-set-with-long-lasting-fragrance-eau-de-original-imahyz6dmugnkgcs.jpeg?q=70',
+        detailUrl: 'https://rukminim2.flixcart.com/image/416/416/xif0q/perfume/q/b/x/80-luxury-perfume-gift-set-with-long-lasting-fragrance-eau-de-original-imahyz6dmugnkgcs.jpeg?q=70', 
+        title: {
+            shortTitle: 'Bellavita Perfume',
+            longTitle: 'Bellavita Luxury Perfume Gift Set with Long Lasting Fragrance Eau De Parfum Perfume  -  80 ml'
+        }, 
+        price: {
+            mrp: 849,
+            cost: 499,
+            discount: '41%'
+        },
+        quantity: 1,
+        description: 'BELLAVITA proudly presents Luxury Gift Set for Women, an exquisitely curated selection. Our four best-selling perfumes- ROSE Woman, GLAM Woman, DATE Woman, and SENORITA Woman, have been carefully chosen to resonate with the modern woman who shows and owns boldness and unwavering determination, an individual who fearlessly follows her own rules and leaves an incredible mark wherever she goes.',
+        discount: 'Minimum 40% Off', 
+        tagline: 'Grab Now!' 
+    },
+    { 
+        id: 'product11',
+        url: 'https://rukminim2.flixcart.com/image/128/128/xif0q/ceiling-lamp/7/g/5/1-1-22-62-0-500-250mm-crystal-chandelier-light-for-living-room-original-imahfft3qf8xyym7.jpeg?q=70',
+        detailUrl: 'https://rukminim2.flixcart.com/image/416/416/xif0q/ceiling-lamp/7/g/5/1-1-22-62-0-500-250mm-crystal-chandelier-light-for-living-room-original-imahfft3qf8xyym7.jpeg?q=70', 
+        title: {
+            shortTitle: 'Ceiling Lamp',
+            longTitle: 'Adwait crystal Black glod polish metal 600mm chandelier hanging ceiling pendant jhoomer Chandelier Ceiling Lamp'
+        }, 
+        price: {
+            mrp: 19999,
+            cost: 4439,
+            discount: '77%'
+        },
+        quantity: 1,
+        description:'Crafted From High Quality Glass And Material, This hanging Lamp Is Long Lasting And Energy Efficient. This Pendent Lamp Produces The Same Amount Of Light As Normal Ones And Features A Look That Is Similar To Traditional Incandescent Lights, But It Also Has A Light Weight Design And Is More Energy Efficient. Austrian Crystal (k-9/Asfour) jhoomar',
+        discount: 'Minimum 75% Off', 
+        tagline: 'Grab Now!' 
+    },
 ];
 

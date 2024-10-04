@@ -20,7 +20,7 @@ const LeftContainer = styled(Box)(({ theme }) => ({
 const Image = styled('img')({
     padding: '15px',
     width: '23rem',
-    height: '23rem'
+    height: '32rem'
 });
 
 const StyledButton = styled(Button)(({ theme }) => ({
