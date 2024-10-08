@@ -29,8 +29,14 @@ export function Home() {
       dispatch(getProducts()); // getProducts() this the function of productActions
    }, [dispatch]);
 
-   const dealOfTheDay = products.filter(product => product.tagline==='Deal of the day');
-   const suggestingItems = products.filter(product=>product.price.cost < 1000);
+   const bestOfElectronics = products.filter(product => product.tagline === 'Deal of the day');
+
+   const homeAndKitchenEssentials = products.filter(product => product.tagline === 'Grab Now!');
+
+   const beautyAndGrooming = products.filter(product=>product.tagline==='Best Seller');
+
+   const topSelection = products.filter(product => product.tagline === 'Best Deal');
+
 
 
    return (
@@ -38,11 +44,11 @@ export function Home() {
          <NavBar />
          <Component>
             <Banner />
-            <MidSlide products={dealOfTheDay} title='Deal of the Day' timer={true} />
+            <MidSlide products={bestOfElectronics} title='Best of Electronics' timer={true} />
             <MidSection />
-            <Slide products={products} title='Discounts for You' timer={false} />
-            <Slide products={suggestingItems} title='Suggesting Items' timer={false} />
-            <Slide products={products} title='Top Selection' timer={false} />
+            <Slide products={homeAndKitchenEssentials} title='Home & Kitchen Essentials' timer={false} />
+            <Slide products={beautyAndGrooming} title='Beauty & Grooming' timer={false} />
+            <Slide products={topSelection} title='Top Selection' timer={false} />
             <Slide products={products} title='Recommended Items' timer={false} />
             <Slide products={products} title='Trending Offers' timer={false} />
             <Slide products={products} title="Season's top picks" timer={false} />
