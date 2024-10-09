@@ -2,12 +2,12 @@ import { Header } from './components/header/Header';
 import { Home } from './components/home/Home';
 import { Box } from '@mui/material';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
 import { DataProvider } from './context/DataProvider';
 import { DetailView } from './components/details/DetailView';
 import { Cart } from './components/cart/Cart';
 import { SuccessPage } from './components/payment/SuccessPage';
 import { CancelPage } from './components/payment/CancelPage';
+import { Footer } from './components/footer/Footer';
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
             <Route path='/cancel' element={<CancelPage />} />
           </Routes>
         </Box>
+        <Footer />
       </BrowserRouter>
     </DataProvider>
   );
