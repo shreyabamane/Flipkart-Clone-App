@@ -104,11 +104,10 @@ export function Footer() {
             <Divider sx={{ backgroundColor: '#454d5e', margin: '30px 0', }} />
 
             {/* Copyright Section */}
-            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '20px' }}>
                 <Typography sx={{ textAlign: 'center', color: '#878787', fontSize: '12px' }}>
                     ©2007-2024 Flipkart.com
                 </Typography>
-            </Box>
+            
         </StyledFooter>
     );
 }
