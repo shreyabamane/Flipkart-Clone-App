@@ -1,25 +1,48 @@
 import { Box, Grid, Typography, Link, Divider, IconButton, styled } from '@mui/material';
 import { Facebook, Twitter, Instagram, YouTube } from '@mui/icons-material';
 
-const StyledFooter = styled(Box)`
- background-color: #1B1212;
- color: #ffffff;
- padding: 40px 4vw 20px 4vw;
- margin-top: 50px;
-`;
-const Heading = styled(Typography)`
- margin-bottom: 12px;
- font-size: 12px;
- color: #878787;
-`;
-const SubHeading = styled(Typography)`
- color: #fff;
- font-size: 12px;
- font-weight: bold;
- text-decoration: none;
- line-height: 18px;
- display: block;
-`;
+const StyledFooter = styled(Box)(({ theme }) => ({
+    backgroundColor: '#1B1212',
+    color: '#ffffff',
+    padding: '40px 4vw 20px 4vw',
+    marginTop: '50px',
+    [theme.breakpoints.down('sm')]: {
+        padding: '20px 2vw',
+    },
+}));
+const Heading = styled(Typography)(({ theme }) => ({
+    marginBottom: '12px',
+    fontSize: '12px',
+    color: '#878787',
+    [theme.breakpoints.down('sm')]: {
+        fontSize: '10px',
+    },
+}));
+const SubHeading = styled(Typography)(({theme})=>({
+ color: '#fff',
+ fontSize: '12px',
+ fontWeight: 'bold',
+ textDecoration: 'none',
+ lineHeight: '18px',
+ display: 'block',
+ [theme.breakpoints.down('sm')]:{
+    fontSize: '10px',
+ },
+}));
+const IconButtonWrapper = styled(Box)(({ theme }) => ({
+    display: 'flex',
+    marginTop: '12px',
+    [theme.breakpoints.down('sm')]: {
+        justifyContent: 'center',
+    },
+}));
+const ResponsiveDivider = styled(Divider)(({ theme }) => ({
+    backgroundColor: '#454d5e',
+    height: '200px',
+    [theme.breakpoints.down('md')]: {
+        display: 'none', // Hide on mobile screens
+    },
+}));
 
 export function Footer() {
     return (
@@ -69,7 +92,7 @@ export function Footer() {
 
                 {/* Vertical Divider */}
                 <Grid item>
-                    <Divider orientation='vertical' variant='middle' sx={{ backgroundColor: '#454d5e', height: '200px' }} />
+                    <ResponsiveDivider orientation='vertical' variant='middle' />
                 </Grid>
 
                 {/* Mail Us Section */}
@@ -81,12 +104,12 @@ export function Footer() {
                     <Typography sx={{ color: '#fff', fontSize: '12px', fontWeight: 'regular', lineHeight: '18px' }}>Outer Ring Road, Devarabeesanahalli Village,</Typography>
                     <Typography sx={{ color: '#fff', fontSize: '12px', fontWeight: 'regular', lineHeight: '18px' }}>Bengaluru, 560103, Karnataka, India</Typography>
 
-                    <Box sx={{ display: 'flex', marginTop: '12px' }}>
+                    <IconButtonWrapper sx={{ display: 'flex', marginTop: '12px' }}>
                         <IconButton href="#" sx={{ color: '#ffffff' }}><Facebook /></IconButton>
                         <IconButton href="#" sx={{ color: '#ffffff' }}><Twitter /></IconButton>
                         <IconButton href="#" sx={{ color: '#ffffff' }}><Instagram /></IconButton>
                         <IconButton href="#" sx={{ color: '#ffffff' }}><YouTube /></IconButton>
-                    </Box>
+                    </IconButtonWrapper>
                 </Grid>
 
                 {/* Registered Office Section */}
@@ -104,10 +127,10 @@ export function Footer() {
             <Divider sx={{ backgroundColor: '#454d5e', margin: '30px 0', }} />
 
             {/* Copyright Section */}
-                <Typography sx={{ textAlign: 'center', color: '#878787', fontSize: '12px' }}>
-                    ©2007-2024 Flipkart.com
-                </Typography>
-            
+            <Typography sx={{ textAlign: 'center', color: '#878787', fontSize: '12px' }}>
+                ©2007-2024 Flipkart.com
+            </Typography>
+
         </StyledFooter>
     );
 }
