@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-//const URL = 'http://localhost:8000'; for local 
-const URL = ''; // for  production
+const URL = 'http://localhost:8000'; 
+
 
 export async function authenticateSignup(data){
     try {
