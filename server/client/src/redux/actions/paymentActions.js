@@ -5,7 +5,9 @@ export const createCheckoutSession = (cartItems) => async (dispatch) => {
     try {
         dispatch({ type: CREATE_PAYMENT_SESSION_REQUEST });
 
-        const { data } = await axios.post('http://localhost:8000/create-checkout-session', { cartItems});
+        //const { data } = await axios.post('http://localhost:8000/create-checkout-session', { cartItems});
+
+        const { data } = await axios.post('create-checkout-session', { cartItems});
 
         dispatch({
             type: CREATE_PAYMENT_SESSION_SUCCESS,
