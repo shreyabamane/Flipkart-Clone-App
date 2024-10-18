@@ -4,7 +4,7 @@ import * as actionTypes from '../constants/productConstant';
 // import { GET_PRODUCTS_SUCCESS, GET_PRODUCTS_FAIL } from "../constants/productConstant";
 
 
-const URL = `http://localhost:8000`;
+const URL = 'https://flipkart-clone-server-k65t.onrender.com';
 
 export const getProducts = () => async (dispatch) => {
 
