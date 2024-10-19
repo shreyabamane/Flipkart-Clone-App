@@ -53,8 +53,5 @@
   },
   "devDependencies": {
     "css-minimizer-webpack-plugin": "^7.0.0"
-  },
-  "engines": {
-    "node": "18.x"
   }
 }
